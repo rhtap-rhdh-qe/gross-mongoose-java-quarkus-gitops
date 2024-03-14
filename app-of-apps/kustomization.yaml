@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: gross-mongoose-java-quarkus 
+  janus-idp.io/tekton: gross-mongoose-java-quarkus
+  backstage.io/kubernetes-id: gross-mongoose-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: gross-mongoose-java-quarkus
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
